@@ -1,0 +1,498 @@
+/* CAPITAL LETTER = the main topic; SMALL LETTER = the sub-topic */
+
+/* CUSTOM FONT */
+@font-face {
+  font-family: "Halimun";
+  src: url("../font/Crimson-Roman.otf") format("opentype");
+  src: url("../font/Halimun.ttf") format("truetype");
+}
+
+/* GENERAL STYLES */
+body {
+  background-color: #4c1310;
+  color: #b8aa9a;
+}
+
+/* NAVBAR */
+.nav-opt {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-link {
+  font-family: Halimun, sans-serif;
+  color: #b8aa9a;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}
+
+/* MAIN */
+.main {
+  transform: translateY(-50px);
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* short intro */
+.short-intro {
+  font-family: crimson-roman, serif;
+  text-align: center;
+}
+
+/* reservation */
+.btn {
+  background-color: #b8aa9a;
+  color: #682b28;
+  font-family: crimson-roman, serif;
+}
+
+/* INFINITE SLIDER */
+.slider {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* slider shadows left and right faded effect */
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, #4c1310, rgba(255, 255, 255, 0));
+  content: "";
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.slider::before {
+  top: 0;
+  left: 0;
+}
+
+.slider::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+/* infinite slideshow and stop sliding when hover */
+.slide-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+/* zooming while hover and setting img size */
+.img-running {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.img-running:hover {
+  transform: scale(1.1);
+}
+
+/* RESTAURANT INFORMATION */
+#restaurant-information {
+  font-family: crimson-roman, serif;
+}
+
+.days {
+  color: #8d721e;
+}
+
+.container p {
+  margin: 0;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #551c19;
+  width: 100%;
+}
+
+.sm-logo {
+  transition: transform 0.3s ease;
+}
+
+.sm-logo:hover {
+  transform: scale(1.3);
+}
+
+.trip-adviser {
+  border-radius: 50%;
+}
+
+.zomato {
+  border-radius: 50%;
+}
+
+.copyright {
+  color: #b8aa9a;
+}
+
+/* MEDIA QUERIES */
+/* 4k - 2560px */
+@media (min-width: 1441px) {
+  /* NAVBAR */
+  .nav-link {
+    font-size: 30px;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  /* MAIN */
+  .main {
+    margin: 5vh 0 10vh;
+  }
+
+  /* logo */
+  .logo {
+    width: auto;
+    height: 50vh;
+    margin-bottom: 5vh;
+  }
+
+  /* short intro */
+  .short-intro {
+    font-size: 1.5rem;
+    width: 40vw;
+    margin: 0 auto 5vh;
+  }
+
+  /* reservation */
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  /* INFINITE SLIDER */
+  #running-image {
+    margin-bottom: 10vh;
+    padding: 5vh 0;
+  }
+
+  .slider {
+    width: 70vw;
+  }
+
+  /* slider shadows left and right faded effect */
+  .slider::before,
+  .slider::after {
+    width: 150px;
+  }
+
+  /* zooming while hover and setting img size */
+  .img-running {
+    width: 15vw;
+    padding: 5px;
+    perspective: 100px;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin-bottom: 10vh;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 2.2vw;
+    height: auto;
+  }
+}
+
+/* Laptop L - 1440px */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  /* NAVBAR */
+  .nav-link {
+    font-size: 30px;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  /* MAIN */
+  .main {
+    margin: 5vh 0 10vh;
+  }
+
+  /* logo */
+  .logo {
+    width: auto;
+    height: 40vh;
+    margin-bottom: 5vh;
+  }
+
+  /* short intro */
+  .short-intro {
+    font-size: 1.5rem;
+    width: 50vw;
+    margin: 0 auto 5vh;
+  }
+
+  /* reservation */
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  /* INFINITE SLIDER */
+  #running-image {
+    margin-bottom: 10vh;
+    padding: 5vh 0;
+  }
+
+  .slider {
+    width: 75vw;
+  }
+
+  /* slider shadows left and right faded effect */
+  .slider::before,
+  .slider::after {
+    width: 150px;
+  }
+
+  /* zooming while hover and setting img size */
+  .img-running {
+    width: 15vw;
+    padding: 5px;
+    perspective: 100px;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin-bottom: 10vh;
+    max-width: 75vw;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 3vw;
+    height: auto;
+  }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* NAVBAR */
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  /* MAIN */
+  .main {
+    margin: 5vh 0 10vh;
+  }
+
+  /* logo */
+  .logo {
+    width: auto;
+    height: 30vh;
+    margin-bottom: 5vh;
+  }
+
+  /* short intro */
+  .short-intro {
+    font-size: 1.2rem;
+    width: 60vw;
+    margin: 0 auto 5vh;
+  }
+
+  /* reservation */
+  .btn {
+    font-size: 1.1rem;
+  }
+
+  /* INFINITE SLIDER */
+  #running-image {
+    margin-bottom: 10vh;
+    padding: 5vh 0;
+  }
+
+  .slider {
+    width: 75vw;
+  }
+
+  /* slider shadows left and right faded effect */
+  .slider::before,
+  .slider::after {
+    width: 150px;
+  }
+
+  /* zooming while hover and setting img size */
+  .img-running {
+    width: 15vw;
+    padding: 5px;
+    perspective: 100px;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin-bottom: 10vh;
+    max-width: 75vw;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 3.5vw;
+    height: auto;
+  }
+}
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .nav-link {
+    font-size: 9px;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  /* MAIN */
+  .main {
+    margin: 1vh 0 5vh;
+  }
+
+  /* logo */
+  .logo {
+    width: auto;
+    height: 25vh;
+    margin-bottom: 5vh;
+  }
+
+  /* short intro */
+  .short-intro {
+    font-size: 0.8rem;
+    width: 60vw;
+    margin: 0 auto 5vh;
+  }
+
+  /* reservation */
+  .btn {
+    font-size: 0.6rem;
+  }
+
+  /* INFINITE SLIDER */
+  #running-image {
+    margin-bottom: 5vh;
+    padding: 5vh 0;
+  }
+
+  .slider {
+    width: 75vw;
+  }
+
+  /* slider shadows left and right faded effect */
+  .slider::before,
+  .slider::after {
+    width: 150px;
+  }
+
+  /* zooming while hover and setting img size */
+  .img-running {
+    width: 25vw;
+    padding: 5px;
+    perspective: 100px;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin-bottom: 10vh;
+    max-width: 75vw;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .address,
+  .lunch-hours,
+  .dinner-hours {
+    margin-bottom: 5vh;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0vh 2vh;
+  }
+
+  .sm-logo {
+    width: 7vw;
+    height: auto;
+  }
+}

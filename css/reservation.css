@@ -1,0 +1,680 @@
+/* CAPITAL LETTER = the main topic; SMALL LETTER = the sub-topic */
+
+/* CUSTOM FONT */
+@font-face {
+  font-family: "Halimun";
+  src: url("../font/Crimson-Roman.otf") format("opentype");
+  src: url("../font/Halimun.ttf") format("truetype");
+}
+
+/* GENERAL STYLES */
+body {
+  background-color: #4c1310;
+  color: #b8aa9a;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+/* HEADER */
+/* breadcrumb */
+#breadcrumb {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.breadcrumb-nav {
+  width: 100%;
+}
+
+.breadcrumb {
+  margin: 0;
+}
+
+.nav-link {
+  font-family: Halimun, sans-serif;
+  color: #b8aa9a;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}
+
+/* cover image & title */
+.cover-image {
+  position: relative;
+  width: 100%;
+}
+
+/* RESERVATION */
+/* form */
+#reservation {
+  border-bottom: #b8aa9a solid 2px;
+}
+
+.reserv-title {
+  display: flex;
+  justify-content: center;
+  font-family: halimun, serif;
+}
+
+.reservation-form {
+  background-color: #6a2724;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: crimson-roman, serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+}
+
+/* button trigger modal */
+button {
+  font-family: crimson-roman, serif;
+  border: #4c1310 solid 5px;
+  color: #b8aa9a;
+  background-color: #4c1310;
+}
+
+button:hover {
+  border: #5f4c35 solid 5px;
+  background-color: #b8aa9a;
+  color: #4c1310;
+}
+
+button:active {
+  border: #5f4c35 solid 5px;
+  background-color: #4c1310;
+  color: #b8aa9a;
+}
+
+/* modal */
+.modal-content {
+  background-color: #b8aa9a;
+  border: #5f4c35 solid 5px;
+  font-family: crimson-roman, serif;
+  color: #5f4c35;
+}
+
+.btn {
+  font-family: crimson-roman, serif;
+}
+
+.save {
+  border: #4c1310 solid 5px;
+  background-color: #4c1310;
+  color: #b8aa9a;
+}
+
+.save:hover {
+  border: #5f4c35 solid 5px;
+  background-color: #b8aa9a;
+  color: #4c1310;
+}
+
+/* alert */
+.alert {
+  background-color: #b8aa9a;
+  border: #5f4c35 solid 5px;
+  color: #6a2724;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+/* RESTAURANT INFORMATION */
+#restaurant-information {
+  font-family: crimson-roman, serif;
+}
+
+.days {
+  color: #8d721e;
+}
+
+.container p {
+  margin: 0;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #551c19;
+  width: 100%;
+}
+
+.sm-logo {
+  transition: transform 0.3s ease;
+}
+
+.sm-logo:hover {
+  transform: scale(1.3);
+}
+
+.trip-adviser {
+  border-radius: 50%;
+}
+
+.zomato {
+  border-radius: 50%;
+}
+
+.copyright {
+  color: #b8aa9a;
+}
+
+/* MEDIA QUERIES */
+/* 4k - 2560px & Laptop L - 1440px */
+@media (min-width: 1025px) {
+  /* COVER TITLE & NAVBAR */
+  /* breadcrumb */
+  .bc-link {
+    padding: 16px 30px;
+  }
+
+  .nav-link {
+    font-size: 2.8rem;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  .home-logo {
+    height: 15vh;
+  }
+
+  .bi {
+    height: 5vh;
+  }
+
+  /* RESERVATION */
+  /* form */
+  #reservation {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    width: 100%;
+  }
+
+  .reserv-title {
+    margin: 3vw;
+  }
+
+  .reservation-form {
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  /* button trigger modal */
+  .modal-title {
+    font-weight: 600;
+  }
+
+  button {
+    margin-top: 2vh;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 0.5vh 0;
+  }
+
+  /* modal */
+  .modal-content {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  /* alert */
+  .alert {
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin: 15vh 0;
+    width: 90vw;
+  }
+
+  .container > .row p {
+    font-size: 1.1rem;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 2.5vw;
+    height: auto;
+  }
+}
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+  /* COVER TITLE & NAVBAR */
+  /* breadcrumb */
+  .bc-link {
+    padding: 16px 15px;
+  }
+
+  .nav-link {
+    font-size: 2.2rem;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  .home-logo {
+    height: 14vh;
+  }
+
+  .bi {
+    height: 4vh;
+  }
+
+  /* RESERVATION */
+  /* form */
+  #reservation {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    width: 100%;
+  }
+
+  .reserv-title {
+    margin: 3vw;
+  }
+
+  .reservation-form {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  /* button trigger modal */
+  .modal-title {
+    font-weight: 600;
+  }
+
+  button {
+    margin-top: 3vh;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 0.5vh 0;
+  }
+
+  /* modal */
+  .modal-content {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  /* alert */
+  .alert {
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin: 14vh 0;
+    width: 85vw;
+  }
+
+  .container > .row p {
+    font-size: 1rem;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  #restaurant-information h3 {
+    font-size: 1.5rem;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 3vw;
+    height: auto;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+}
+
+/* Small - 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+  /* COVER TITLE & NAVBAR */
+  /* breadcrumb */
+  .bc-link {
+    padding: 16px 10px;
+  }
+
+  .nav-link {
+    font-size: 1.8rem;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  .home-logo {
+    height: 12vh;
+  }
+
+  .bi {
+    height: 3vh;
+  }
+
+  /* RESERVATION */
+  /* form */
+  #reservation {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    width: 100%;
+  }
+
+  .reserv-title {
+    margin: 3vw;
+  }
+
+  .reservation-form {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  /* button trigger modal */
+  .modal-title {
+    font-weight: 600;
+  }
+
+  button {
+    margin-top: 3vh;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    padding: 0.5vh 0;
+  }
+
+  /* modal */
+  .modal-content {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  /* alert */
+  .alert {
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    width: 80vw;
+    margin: 14vh 0;
+  }
+
+  .address,
+  .lunch-hours {
+    padding-bottom: 5vh;
+  }
+
+  .container > .row p {
+    font-size: 1rem;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  #restaurant-information h3 {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 5vh;
+  }
+
+  .sm-logo {
+    width: 5vw;
+    height: auto;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+/* Below 576px */
+@media (max-width: 575px) {
+  /* COVER TITLE & NAVBAR */
+  /* breadcrumb */
+  .bc-link {
+    padding: 12px 8px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .nav-link:hover {
+    font-weight: 800;
+  }
+
+  .home-logo {
+    height: 8vh;
+  }
+
+  .bi {
+    height: 2vh;
+  }
+
+  /* RESERVATION */
+  /* form */
+  #reservation {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    width: 100%;
+  }
+
+  #reservation > h1 {
+    font-size: 1.2rem;
+  }
+
+  .reserv-title {
+    margin: 3vw;
+  }
+
+  .reservation-form {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .reservation-form > h2 {
+    font-size: 1.2rem;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea {
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  /* button trigger modal */
+  .modal-title {
+    font-weight: 600;
+  }
+
+  button {
+    margin-top: 3vh;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    padding: 0.5vh 0;
+  }
+
+  /* modal */
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-content {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  /* alert */
+  .alert {
+    width: 85vw;
+    font-size: 0.7rem;
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  /* RESTAURANT INFORMATION */
+  #restaurant-information {
+    margin: 10vh 0;
+    width: 80vw;
+  }
+
+  .address,
+  .lunch-hours {
+    padding-bottom: 5vh;
+  }
+
+  .container > .row p {
+    font-size: 0.9rem;
+  }
+
+  .days {
+    font-weight: 400;
+  }
+
+  #restaurant-information h3 {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* FOOTER */
+  .nav-item {
+    padding: 0 3vh;
+  }
+
+  .sm-logo {
+    width: 7vw;
+    height: auto;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+}
